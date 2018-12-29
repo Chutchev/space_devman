@@ -5,7 +5,6 @@ import dotenv
 
 def upload_photo(filename, bot):
     bot.upload_photo(filename)
-    print(f"Загружено. {filename}")
 
 
 def main():
@@ -17,7 +16,6 @@ def main():
     bot.login(username=login, password=password)
     for file in os.listdir(directory):
         filename = f"{os.path.join(directory,file)}"
-        print(filename)
         upload_photo(filename, bot)
 
 
